@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+# 数据源配置
+spring:
+  application:
+    name: fresh-fruits-search-service
+  cloud:
+    nacos:
+      discovery:
+        #Nacos注册中心地址
+        server-addr: 127.0.0.1:8848
+        enabled: true
+  data:
+    # elasticsearch配置
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9300
+      client:
+        reactive:
+          connection-timeout: 10s

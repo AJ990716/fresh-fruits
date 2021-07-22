@@ -1,0 +1,25 @@
+server:
+  port: 8083
+
+# MyBatis配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.fresh.fruits.pojo
+
+# 数据源配置
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/fresh-itemcat-db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 990716
+  application:
+    name: fresh-fruits-itemcat-service
+  cloud:
+    nacos:
+      discovery:
+        #Nacos注册中心地址
+        server-addr: 127.0.0.1:8848
+        enabled: true
