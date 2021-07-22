@@ -1,0 +1,123 @@
+/*!
+ * 功能：果然新鲜 - 活动推送
+ */
+
+
+/*!
+ * 功能：当前位置导航栏
+ */
+
+.position {
+	padding-top: 1pc;
+	padding-bottom: 14px;
+	width: 75pc;
+	height: 20px;
+}
+.position>span {
+	color: #333;
+	font-weight: 700;
+}
+
+/*!
+ * 功能：右侧功能头样式
+ */
+
+.tab {
+	width: 60pc;
+	height: 43px;
+	border-bottom: 1px solid #ccc;
+}
+.tab>li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 75pt;
+	height: 42px;
+	border-bottom: 0 solid #00c3f5;
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 42px;
+}
+.tab>li:hover {
+	cursor: pointer;
+}
+.display {
+	overflow: hidden;
+	margin-top: 15px;
+}
+.display,
+.display>li>div {
+	margin-left: 10px;
+	width: 60pc;
+	height: 25pc;
+}
+.display>li>div>div {
+	float: left;
+	width: 140px;
+	height: 20px;
+}
+.display>li>div>div>input {
+	float: left;
+}
+.display>li>div>div>span {
+	display: block;
+	margin-left: 40px;
+	width: 75pt;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	initial-letter: 1px;
+}
+.display>li>div>p {
+	color: #666;
+}
+.display>li>div>p>a {
+	color: #267eff;
+}
+
+/*!
+ * 功能：按钮样式
+ */
+
+input[type=checkbox],
+input[type=radio] {
+	display: inline-block;
+	margin-left: 5px;
+	width: 20px;
+	height: 20px;
+	outline: 0!important;
+	border: 0;
+	background-color: transparent;
+	color: #d8d8d8;
+	vertical-align: middle;
+	line-height: 20px;
+	-webkit-appearance: none;
+}
+input[type=radio]:after {
+	border-radius: 50%;
+}
+input[type=checkbox]:after,
+input[type=radio]:after {
+	display: block;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #ddd;
+	background-color: #fff;
+	color: #fff;
+	content: "";
+	text-align: center;
+	font-size: 1pc;
+	line-height: 14px;
+}
+input[type=checkbox]:checked:after {
+	border: 4px solid #ddd;
+	background-color: #c61722;
+}
+input[type=radio]:checked:after {
+	border-color: #c61722;
+	background-color: #c61722;
+	content: "L";
+	transform: matrix(-.766044, -.642788, -.642788, .766044, 0, 0);
+}

@@ -1,0 +1,83 @@
+/*!
+ * 功能说明：果然新鲜 - 问题反馈
+ */
+
+.feedback {
+	margin: 25px 0;
+}
+.feedback .fresh-main {
+	box-sizing: border-box;
+	padding: 20px;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+}
+.feedback .fresh-main .type {
+	clear: both;
+	width: 100%;
+	height: 40px;
+	font-size: 1pc;
+	line-height: 40px;
+}
+.feedback .fresh-main .type input {
+	margin-bottom: 2px;
+	width: 15px;
+	height: 15px;
+	vertical-align: text-bottom;
+}
+.feedback .fresh-main .desc {
+	margin: 10px 0;
+	width: 100%;
+}
+.feedback .fresh-main .desc>h2 {
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	color: #333;
+	letter-spacing: 2px;
+	font-size: 15px;
+	font-family: tahoma;
+	line-height: 40px;
+}
+.feedback .fresh-main .desc>input,
+.feedback .fresh-main .desc>textarea {
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: calc(100% - 20px);
+	outline: 0;
+	border: 1px solid #999;
+	border-radius: 5px;
+}
+.feedback .fresh-main .desc>input:hover {
+	border: 1px solid #333;
+}
+.feedback .fresh-main .desc>textarea {
+	height: 250px;
+	color: #333;
+	text-align: 2em;
+	font-size: 9pt;
+	font-family: microsoft yahei;
+	line-height: 25px;
+	resize: none;
+}
+.feedback .fresh-main p {
+	width: 100%;
+	text-align: right;
+}
+.feedback .fresh-main p button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 130px;
+	outline: 0;
+	border: none;
+	border-radius: 5px;
+	background: #c61722;
+	background-image: none;
+	color: #fff;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+}
+.feedback .fresh-main p button:hover {
+	background-color: #d02e38;
+}

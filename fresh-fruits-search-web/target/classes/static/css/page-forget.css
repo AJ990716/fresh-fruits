@@ -1,0 +1,120 @@
+/*!
+ * 功能：果然新鲜 - 忘记密码
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.fresh-body-1 {
+	position: relative;
+	height: 579px;
+}
+.fresh-body>img {
+	width: 100%;
+}
+.fresh-img {
+	position: absolute;
+	top: 20px;
+	left: 75pt;
+	width: 500px;
+	height: 500px;
+}
+.fresh-registerbox {
+	position: absolute;
+	top: 60px;
+	left: 750px;
+	padding: 30px;
+	width: 280px;
+	height: 25pc;
+	border-radius: 10px;
+	background: #fff;
+}
+.fresh-registerbox>h2 {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+.fresh-registerbox>form>div {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 280px;
+	height: 36px;
+	border-bottom: 1px solid #ccc;
+}
+.fresh-registerbox>form>div>span {
+	width: 60px;
+	text-align: right;
+}
+.fresh-registerbox>form>div>p,
+.fresh-registerbox>form>div>span {
+	float: left;
+	display: block;
+	margin-right: 6px;
+	height: 36px;
+	outline: 0;
+	border: 1px solid #fff;
+	line-height: 36px;
+}
+.fresh-registerbox>form>div>p {
+	width: 10pc;
+	color: #666;
+	text-align: left;
+}
+.fresh-registerbox>form>div>input[type=password],
+.fresh-registerbox>form>div>input[type=text] {
+	float: left;
+	width: 210px;
+	height: 36px;
+	outline: 0;
+	border: 1px solid #fff;
+}
+.fresh-registerbox>form>div>input[type=checkbox] {
+	float: left;
+	margin-top: 13px;
+}
+.fresh-registerbox>form>div>input[type=submit] {
+	width: 210px;
+	height: 36px;
+	outline: 0;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	background: #c61722;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 10px;
+	cursor: pointer;
+}
+.fresh-registerbox>form>div>input[type=submit]:hover {
+	background: #e83543;
+}
+.fresh-registerbox>form>div:nth-child(5) {
+	margin-top: 20px;
+	margin-left: 30px;
+	height: 30px;
+	border: 1px solid hsla(0, 0%, 100%, 0);
+}
+.verification {
+	width: 5pc!important;
+}
+.getverification {
+	width: 130px!important;
+	height: 38px!important;
+	outline: 0;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background: #e1e1e1;
+}
+.getverification:hover {
+	background: #e6e6e6;
+	cursor: pointer;
+}
+p.remember {
+	margin-top: 20px;
+	width: 100%;
+	text-align: right;
+}

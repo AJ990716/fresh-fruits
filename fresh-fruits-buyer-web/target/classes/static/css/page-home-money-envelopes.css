@@ -1,0 +1,136 @@
+/*!
+ * 功能：果然新鲜 - 我的红包
+ */
+
+
+/*!
+ * 功能：当前位置
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.position {
+	padding-top: 1pc;
+	padding-bottom: 14px;
+	width: 75pc;
+	height: 20px;
+}
+.position>span {
+	color: #333;
+	font-weight: 700;
+}
+
+/*!
+ * 功能：右侧功能头样式
+ */
+
+.tab {
+	width: 60pc;
+	height: 43px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.tab>li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 75pt;
+	height: 42px;
+	border-bottom: 0 solid #00c3f5;
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 42px;
+}
+.tab>li:nth-child(1) {
+	border-bottom: 2px solid #c61722;
+	color: #c61722;
+}
+.tab>li:hover {
+	cursor: pointer;
+}
+.display {
+	overflow: hidden;
+	width: 60pc;
+}
+.display>li>div {
+	width: 340px;
+}
+.display>li>div h1 {
+	margin-top: 5pc;
+	margin-bottom: 30px;
+	width: 60pc;
+	color: #797979;
+	text-align: center;
+}
+.tips {
+	width: 60pc;
+	height: 183px;
+}
+.tips>img {
+	margin-left: 310px;
+	width: 340px;
+	height: 87pt;
+}
+.display>li {
+	display: none;
+	width: 60pc;
+}
+.display>li:nth-child(1) {
+	display: block;
+}
+.detailed {
+	margin-top: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	width: 910px;
+	height: 24px;
+}
+.show {
+	display: block;
+}
+.none {
+	display: none;
+}
+.couponbox {
+	overflow: hidden;
+	margin-top: -44px;
+	padding-bottom: 20px;
+	width: 60pc;
+}
+.couponbox>div {
+	position: relative;
+	float: left;
+	margin: 8px;
+	width: 11pc;
+	height: 9pc;
+}
+.couponbox>div>img {
+	width: 100%;
+	height: 100%;
+}
+.couponbox>div>h2 {
+	top: 10px;
+	left: 20px;
+	width: 5pc;
+	height: 68px;
+	font-weight: 600;
+	font-size: 45px;
+}
+.couponbox>div>h2,
+.couponbox>div>h3 {
+	position: absolute;
+	display: block;
+	color: #dc1925;
+	text-align: right;
+}
+.couponbox>div>h3 {
+	top: 58px;
+	left: 24px;
+	width: 93px;
+	height: 30px;
+	font-weight: 100;
+	font-size: 9pt;
+}

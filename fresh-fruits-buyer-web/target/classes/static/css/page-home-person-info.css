@@ -1,0 +1,207 @@
+/*!
+ * 功能：果然新鲜 - 我的信息
+ */
+
+
+/*!
+ * 功能：当前位置
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.position {
+	padding-top: 1pc;
+	padding-bottom: 14px;
+	width: 75pc;
+	height: 20px;
+}
+.position>span {
+	color: #333;
+	font-weight: 700;
+}
+
+/*!
+* 功能：右侧功能头样式
+*/
+
+.information {
+	padding: 37.5px;
+	width: 926px;
+	height: 75pt;
+	border-radius: 5px;
+	background: #fff;
+}
+.headportrait {
+	float: left;
+	overflow: hidden;
+	width: 75pt;
+	height: 75pt;
+	border-radius: 68px;
+}
+.headportrait>img {
+	width: 100%;
+	height: 100%;
+}
+.identity {
+	float: left;
+	overflow: hidden;
+	margin-left: 30px;
+	max-width: 200px;
+	color: #333;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 19px;
+}
+.user-level {
+	position: relative;
+	display: block;
+	margin-top: 8px;
+	margin-bottom: 1pc;
+	width: 200px;
+	height: 20px;
+	background: 0 0!important;
+	color: #3a3a3a;
+	cursor: pointer;
+}
+.user-level>em {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/page-home-person-info/icon01.svg) no-repeat;
+	background-position: -343px 0;
+	font-weight: 400;
+	font-style: normal;
+}
+.user-level>p {
+	position: relative;
+	top: 5px;
+	left: 17px;
+	width: 78pt;
+	height: 10px;
+	border-radius: 0 5px 5px 0;
+	background: #eaeaea;
+}
+.data {
+	position: absolute;
+	top: 1px;
+	left: 99pt;
+	color: #3a3a3a;
+	font-size: 10px;
+}
+.btn1 {
+	border: 1px solid #595454;
+	border-radius: 5px;
+	background: #595454;
+	color: #fde4b3;
+}
+.btn1,
+.btn2 {
+	float: left;
+	margin-right: 9pt;
+	width: 82px;
+	height: 26px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 27px;
+}
+.btn2 {
+	border: 1px solid #888;
+	border-radius: 5px;
+}
+.btn1:hover {
+	background: #333;
+}
+.btn1:hover,
+.btn2:hover {
+	border-color: #333;
+}
+.clearfix {
+	float: left;
+	width: 596px;
+	height: 75pt;
+}
+.clearfix>li {
+	float: left;
+	padding-right: 14px;
+	padding-left: 14px;
+	width: 90pt;
+	text-align: center;
+}
+.clearfix>li>p:nth-child(1) {
+	color: #333;
+	font-size: 28px;
+	line-height: 2pc;
+}
+.clearfix>li>p:nth-child(2) {
+	color: #333;
+	font-size: 9pt;
+	line-height: 2pc;
+}
+.clearfix>li>a {
+	display: block;
+	margin: 11px auto;
+	width: 62px;
+	height: 18px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	color: #666;
+	text-align: center;
+	line-height: 18px;
+}
+.account {
+	overflow: hidden;
+	margin-top: 20px;
+	padding: 20px;
+	width: 962px;
+	border-radius: 5px;
+	background: #fff;
+}
+.account>div:nth-child(1)>p {
+	display: block;
+	margin-left: 1pc;
+	padding-bottom: 20px;
+	width: 96%;
+	height: 24px;
+	border-bottom: 1px solid #ccc;
+	color: #303133;
+	font-size: 1pc;
+}
+.password {
+	padding-top: 20px;
+	width: 100%;
+	height: 55px;
+}
+.password>div:nth-child(1) {
+	float: left;
+	margin-left: 1pc;
+	width: 99pt;
+	height: 55px;
+	font-size: 14px;
+}
+.password>div:nth-child(2) {
+	float: left;
+	width: 722px;
+	height: 55px;
+	font-size: 14px;
+}
+.password>div:nth-child(2)>p:nth-child(1) {
+	font-weight: 700;
+}
+.password>div:nth-child(2)>p:nth-child(2) {
+	color: #7f7f7f;
+}
+.password>a {
+	float: left;
+	display: block;
+	width: 30px;
+	height: 55px;
+	font-size: 14px;
+}
+.passwordys {
+	color: #7f7f7f;
+	letter-spacing: 2px;
+}

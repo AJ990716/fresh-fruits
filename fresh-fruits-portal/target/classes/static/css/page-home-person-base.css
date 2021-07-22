@@ -1,0 +1,274 @@
+/*!
+ * 功能：果然新鲜 - 详细信息
+ */
+
+
+/*!
+ * 功能：下拉框样式
+ */
+
+option {
+	display: block;
+	padding: 0 2px 1px;
+	min-height: 1.2em;
+	font-weight: 400;
+}
+option, select {
+	height: 23px;
+	white-space: pre;
+}
+select {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 1px solid #a9a9a9;
+	border-radius: 0;
+	border-image: initial;
+	background-color: #fff;
+	color: #666;
+	text-align: start;
+	text-indent: 0;
+	text-transform: none;
+	text-shadow: none;
+	word-spacing: normal;
+	letter-spacing: normal;
+	cursor: default;
+	-webkit-writing-mode: horizontal-tb!important;
+	text-rendering: auto;
+	-webkit-appearance: menulist;
+	align-items: center;
+	-webkit-rtl-ordering: logical;
+}
+/*!
+ * 功能：当前位置
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.position {
+	padding-top: 1pc;
+	padding-bottom: 14px;
+	width: 75pc;
+	height: 20px;
+}
+.position>span {
+	color: #333;
+	font-weight: 700;
+}
+/*!
+ * 功能：新增地址样式
+ */
+
+.newlyadded {
+	width: 60pc;
+}
+.newlyadded>div:nth-child(1) {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 60pc;
+	height: 24px;
+}
+.newlyadded>div:nth-child(1)>h2 {
+	float: left;
+	display: block;
+	width: 133px;
+	height: 24px;
+	line-height: 24px;
+}
+.newlyadded>div:nth-child(1)>span {
+	float: left;
+	display: block;
+	width: 283px;
+	height: 24px;
+	line-height: 24px;
+}
+.inputbox, .inputbox2, .inputbox3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 975pt;
+	height: 39px;
+}
+.inputbox .select {
+	width: 180px;
+}
+.inputbox>div {
+	float: left;
+	display: block;
+	margin-right: 20px;
+	width: 76px;
+	height: 37px;
+	color: #666;
+	font-size: 14px;
+	line-height: 37px;
+}
+.inputbox>span {
+	float: left;
+	display: block;
+	margin-right: 0px;
+	width: 40px;
+	height: 37px;
+	color: #666;
+	font-size: 14px;
+	line-height: 37px;
+}
+.inputbox>input {
+	float: left;
+	margin-right: 53px;
+	padding: 0 10px;
+	width: 10pc;
+	height: 37px;
+	outline: 0;
+	border: none;
+	border: 1px solid #e0e0e0;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+label {
+	width: 79px;
+	float: left;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+	margin-right: 38px;
+	font-size: 14px;
+	color: #666;
+}
+label span {
+	width: 50px;
+	display: inline-block;
+	height: 38px;
+	line-height: 37px;
+	padding-left: 24px;
+	position: relative;
+	cursor: pointer;
+}
+label span>div {
+	text-align: right;
+	width: 30px;
+	height: 37px;
+	line-height: 37px;
+}
+label span:before {
+	content: '';
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	border: 1px solid #999;
+	box-sizing: border-box;
+	border-radius: 50%;
+	left: 0;
+	top: 6px;
+}
+label span:after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 18px;
+	background-color: #c61722;
+	box-sizing: border-box;
+	border-radius: 50%;
+	left: 5px;
+	top: 10px;
+	opacity: 0;
+}
+label input {
+	display: none;
+}
+label input:checked~span:before {
+	width: 26px;
+	height: 26px;
+	border-color: #999;
+	transition: border-color 0.5s ease-in;
+}
+label input:checked~span:after {
+	width: 16px;
+	height: 16px;
+	opacity: 1;
+	transition: opacity 0.3s ease-in;
+}
+.inputbox2>div {
+	float: left;
+	display: block;
+	margin-right: 20px;
+	width: 76px;
+	height: 37px;
+	color: #666;
+	font-size: 14px;
+	line-height: 37px;
+}
+.inputbox2>.select {
+	float: left;
+	margin-right: 59px;
+	width: 181px!important;
+	height: 37px!important;
+	border: 1px solid #e0e0e0;
+}
+.inputbox3>div {
+	float: left;
+	display: block;
+	margin-right: 20px;
+	width: 76px;
+	height: 37px;
+	color: #666;
+	font-size: 14px;
+	line-height: 37px;
+}
+.inputbox3>input {
+	float: left;
+	margin-right: 40px;
+	padding: 0 10px;
+	width: 842px;
+	height: 37px;
+	outline: 0;
+	border: none;
+	border: 1px solid #e0e0e0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+.btnbox {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 959px;
+	height: 30px;
+}
+.btnbox>input[type=button] {
+	float: right;
+	width: 75pt;
+	height: 39px;
+	border: none;
+	border-radius: 5px;
+	background: #c61722;
+	color: #fff;
+}
+.btnbox>input[type=button]:hover {
+	cursor: pointer;
+}
+.btnbox>div {
+	float: right;
+	margin-right: 20px;
+	margin-left: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 60px;
+	height: 39px;
+	font-size: 14px;
+	line-height: 39px;
+}
+.btnbox>input[type=checkbox] {
+	float: right;
+	margin-top: 10px;
+	width: 20px;
+	height: 20px;
+}
+.headimg {
+	float: left;
+	width: 200px !important;
+	height: 200px !important;
+	border: 1px solid #666;
+}
+.remarks {
+	width: 500px !important;
+	color: #c61722 !important;
+}

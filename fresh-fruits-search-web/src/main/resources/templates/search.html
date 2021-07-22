@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" href="/static/img/page-common/favicon.ico" type="image/x-icon" />
+<title>果然新鲜 - 搜索结果</title>
+<link rel="stylesheet" type="text/css" href="/static/css/page-common.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/page-search.css" />
+</head>
+
+<body>
+<!-- 网页头部开始 -->
+<script type="text/javascript" src="/static/js/page-header.js" charset="UTF-8"></script>
+<!-- 网页头部结束 --> 
+
+<!-- 网页主体开始 -->
+<div class="fresh-main-fluid" style="background: #F5F5F5;">
+  <div class="fresh-main fresh-center fresh-clearfix"> 
+    <!-- 搜索结果开始 -->
+    <div class="position"> <a>全部结果&nbsp;&gt;</a> <span>水果</span> </div>
+    <!-- 搜索结果结束 --> 
+    
+    <!-- 筛选条件开始 -->
+    <div class="conditions">
+      <ul class="item">
+        <li>商品分类：</li>
+        <li> <a href="">时令水果</a> </li>
+        <li> <a href="">时令水果</a> </li>
+        <li> <a href="">时令水果</a> </li>
+        <li> <a href="">时令水果</a> </li>
+      </ul>
+      <ul class="item">
+        <li>商品产地：</li>
+        <li> <a href="">河北省</a> </li>
+        <li> <a href="">河北省</a> </li>
+        <li> <a href="">河北省</a> </li>
+        <li> <a href="">河北省</a> </li>
+      </ul>
+    </div>
+    <!-- 筛选条件结束 --> 
+    
+    <!-- 综合排序开始 -->
+    <div class="conditions" style="margin-top: 15px;padding-top: 5px; padding-bottom: 5px;">
+      <ul class="item">
+        <li>搜索条件：</li>
+        <li> <a href="">综合</a> </li>
+        <li> <a href="">最新</a> </li>
+        <li> <a href="">评价</a> </li>
+        <li> <a href="">价格</a> </li>
+      </ul>
+    </div>
+    <!-- 综合排序结束 -->
+    <!--数据展示区域-->
+    <textarea id="template" style="display: none;">
+
+    <div class="shopshowbox">
+      <ul>
+         {#foreach $T.data.records as record}
+          <a href="details.html">
+            <li>
+              <div class="shopbox"> <img src="{$T.record.image}" />
+                <h2 >{$T.record.name}</h2>
+                <div> <span>￥<span>{$T.record.price}</span></span><span>
+                  <img class="addressimg" src="/static/img/page-search/location.png">
+                  <span>{$T.record.source}</span> </span> </div>
+              </div>
+            </li>
+            </a>
+          {#/for}
+      </ul>
+    </div>
+    <!--商品展示结束-->
+    
+    <!--页码开始-->
+    <div class="pagenum">
+      <ul>
+        {#if $T.data.pageNumber==1}
+             <div> <img src="/static/img/page-search/pagenum-left-zui.png" /> </div>
+        {#else}
+             <div> <img src="/static/img/page-search/pagenum-left-zui.png" onclick="loadData({$T.data.pageNumber-1})"/> </div>
+        {#/if}
+
+        {#foreach $T.data.numbers as record}
+          <a href="javascript:loadData({$T.record});"><li>{$T.record}</li></a>
+        {#/for}
+        {#if $T.data.pageNumber==$T.data.pageCount}
+           <div> <img src="/static/img/page-search/pagenum-right-zui.png"  /> </div>
+        {#else}
+           <div> <img src="/static/img/page-search/pagenum-right-zui.png" onclick="loadData({$T.data.pageNumber+1})" /> </div>
+        {#/if}
+
+        <div style="width: 50px"><a href="#" >共{$T.data.pageNumber}/{$T.data.pageCount}页</a></div>
+		<div style="width: 50px"><a href="#">共{$T.data.totalCount}条</a></div>
+
+      </ul>
+    </div>
+    <!--页码结束-->
+    </textarea>
+    <!-- 数据展示区 -->
+    <div id="res"></div>
+  </div>
+</div>
+<!-- 网站主体结束 --> 
+
+<!-- 网页底部开始 --> 
+<script type="text/javascript" src="/static/js/page-footer.js" charset="UTF-8"></script>
+<!-- 网页底部结束 --> 
+
+<script type="text/javascript" src="/static/plugins/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/static/js/page-search.js"></script>
+<script type="text/javascript" src="/static/js/jquery.jtemplates.js"></script>
+
+<script type="text/javascript">
+
+  //异步搜索
+  function search() {
+    var keywords=$("#keywords").val();
+    $.getJSON("/search/searchdata",{"keywords":keywords},function (result) {
+      alert(JSON.stringify(result));
+      // 附上模板
+      $("#res").setTemplateElement("template");
+      // 给模板加载数据
+      $("#res").processTemplate(result);
+    })
+  }
+
+  function loadData(pageNumber) {
+    //alert(pageNumber);
+    $.post("/search/searchdata", {
+      "pageNumber": pageNumber,
+      "keywords": $("#keywords").val()
+    }, function(result) {
+      //alert(JSON.stringify(result));
+      if(result.code == 200) {
+        // 附上模板
+        $("#res").setTemplateElement("template");
+        // 给模板加载数据
+        $("#res").processTemplate(result);
+      }
+    }, "json");
+  }
+
+  //页面加载的时候,获取首页搜索的内容
+  $(function () {
+     var url= window.location.href;
+     var keywords=url.split("=")[1];
+     //alert(keywords);
+     $("#keywords").val(keywords);
+     loadData(1);
+  });
+
+</script>
+
+
+</body>
+</html>

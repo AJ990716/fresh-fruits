@@ -1,0 +1,92 @@
+/*!
+ * 功能：果然新鲜 - 我的消息
+ */
+
+
+/*!
+ * 功能：当前位置导航栏
+ */
+
+.position {
+	padding-top: 1pc;
+	padding-bottom: 14px;
+	width: 75pc;
+	height: 20px;
+}
+.position>span {
+	color: #333;
+	font-weight: 700;
+}
+
+/*!
+ * 功能：右侧功能头样式
+ */
+
+.tab {
+	width: 60pc;
+	height: 43px;
+	border-bottom: 1px solid #ccc;
+}
+.tab>li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 75pt;
+	height: 42px;
+	border-bottom: 0 solid #00c3f5;
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 42px;
+}
+.tab>li:nth-child(1) {
+	border-bottom: 2px solid #c61722;
+	color: #c61722;
+}
+.tab>li:hover {
+	cursor: pointer;
+}
+.display {
+	overflow: hidden;
+	width: 60pc;
+}
+.display>li>div {
+	width: 340px;
+}
+.display>li>div h1 {
+	margin-top: 140px;
+	margin-bottom: 30px;
+	width: 60pc;
+	color: #797979;
+	text-align: center;
+}
+.tips {
+	width: 60pc;
+	height: 183px;
+}
+.tips>img {
+	margin-left: 310px;
+	width: 340px;
+	height: 87pt;
+}
+.display>li {
+	display: none;
+	width: 60pc;
+}
+.display>li:nth-child(1) {
+	display: block;
+}
+.detailed {
+	margin-top: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	width: 910px;
+	height: 24px;
+}
+.show {
+	display: block;
+}
+.none {
+	display: none;
+}

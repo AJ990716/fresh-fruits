@@ -1,0 +1,127 @@
+/*!
+ * 功能：果然新鲜 - 登录
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.fresh-body-1 {
+	position: relative;
+	height: 579px;
+}
+.fresh-body>img {
+	width: 100%;
+}
+.fresh-img {
+	position: absolute;
+	top: 20px;
+	left: 75pt;
+	width: 500px;
+	height: 500px;
+}
+.fresh-loginbox {
+	position: absolute;
+	top: 60px;
+	left: 750px;
+	padding: 30px;
+	width: 280px;
+	height: 25pc;
+	border-radius: 10px;
+	background: #fff;
+}
+.fresh-loginbox>h2 {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+.fresh-loginbox-text {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+}
+.fresh-loginbox-text>p {
+	margin-top: 9pt;
+	margin-bottom: 7px;
+	width: 100%;
+	text-align: left;
+	font-weight: 400;
+	font-size: 9pt;
+}
+.fresh-loginbox-text>div {
+	width: 100%;
+	height: 20px;
+}
+.fresh-loginbox-text>div>img {
+	float: left;
+	margin-right: 6px;
+	margin-left: 6px;
+	width: 20px;
+	height: 20px;
+}
+.fresh-loginbox-text>div>input {
+	float: left;
+	width: 15pc;
+	height: 20px;
+	outline: 0;
+	border: 1px solid #fff;
+}
+.fresh-login-forget {
+	float: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.fresh-login-forget>a {
+	color: #000;
+	text-decoration: none;
+}
+.fresh-login-submit {
+	clear: both;
+	width: 100%;
+	height: 40px;
+}
+.fresh-login-submit>input {
+	width: 100%;
+	height: 40px;
+	outline: 0;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	background: #c61722;
+	color: #fff;
+	letter-spacing: 10px;
+	cursor: pointer;
+}
+.fresh-login-submit>input:hover {
+	background: #e83543;
+	cursor: pointer;
+}
+.fresh-login-Register,
+.fresh-login-thirdlogin {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.fresh-flogin-loginmode {
+	width: 100%;
+	height: 40px;
+}
+.fresh-login-loginmode>div {
+	margin-right: 50px;
+	margin-left: 50px;
+	width: 180px;
+	height: 40px;
+}
+.fresh-login-loginmode>div>a>img {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 40px;
+	height: 40px;
+}

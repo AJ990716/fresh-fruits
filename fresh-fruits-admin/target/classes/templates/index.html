@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="fresh-admin" ng-controller="indexController">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>果然新鲜 - 运营商后台</title>
+<!-- Page basic information -->
+<meta name="description" content="{{adminConfig.description}}">
+<meta name="keywords" content="{{adminConfig.keywords}}">
+<meta name="author" content="{{adminConfig.author}}">
+<!-- Page icon information -->
+<link rel="shortcut icon" href="../favicon.ico" />
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="../plugins/ionicons/css/ionicons.min.css">
+<!-- Roboto -->
+<link rel="stylesheet" href="../plugins/roboto/css/roboto.min.css">
+<!-- AdminLTE -->
+<link rel="stylesheet" href="../plugins/adminlte/css/adminlte.min.css">
+<!-- AdminLTE skins -->
+<link rel="stylesheet" href="../plugins/adminlte/css/skins/_all-skins.min.css">
+<!-- zeroModal -->
+<link rel="stylesheet" href="../plugins/zeroModal/css/zeroModal.min.css">
+<!-- iCheck -->
+<link rel="stylesheet" href="../plugins/iCheck/all.min.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="../plugins/html5shiv/html5shiv.min.js"></script>
+  <script type="text/javascript" src="../plugins/respond/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="hold-transition {{adminConfig.theme}} sidebar-mini">
+	<!-- Page Wrapper Start -->
+	<div class="wrapper">
+		<!-- Page Header Start -->
+		<header class="main-header" style="border-top: 6px solid #3c8dbc;">
+			<!-- Logo Start -->
+			<a href="index.html" class="logo">
+				<!-- mini logo for sidebar mini 50x50 pixels -->
+				<span class="logo-mini"><b>F</b>Sys</span>
+				
+				<!-- logo for regular state and mobile devices -->
+				<span class="logo-lg">Fresh-Admin</span>
+			</a>
+			<!-- Logo End -->
+			
+			<!-- Header Navbar Start -->
+			<nav class="navbar navbar-static-top">
+				<!-- Sidebar Toggle Button Start-->
+				<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+				<!-- Sidebar Toggle Button End-->
+				
+				<!-- Navbar Custom Menu Start -->
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<!-- Notifications Start -->
+						<li class="notifications-menu user user-menu">
+							<a href="http://fresh.com:9102/index.html" target="_blank"> <img src="../img/myhome.png" class="user-image" alt="Home Image" style="margin-top: -4px;margin-right: 5px;"> <span class="hidden-xs">商城首页</span> </a>
+						</li>
+						<!-- Notifications End -->
+						
+						<!-- User Account Start -->
+						<li class="dropdown user user-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="../img/admin.jpg" class="user-image" alt="User Image"> <span class="hidden-xs">Admin</span> </a>
+							<ul class="dropdown-menu">
+								<!-- Menu Header Start -->
+								<li class="user-header">
+									<img src="../img/admin.jpg" class="img-circle" alt="User Image">
+									<p><big>Admin</big> <small>上次登录：2019-07-17 11:35:25</small></p>
+								</li>
+								<!-- Menu Header End -->
+								<!-- Menu Footer Start-->
+								<li class="user-footer">
+									<div class="pull-left">
+										<a href="#" class="btn btn-default btn-flat">设置</a>
+									</div>
+									<div class="pull-right">
+										<a href="/logout" class="btn btn-default btn-flat">退出</a>
+									</div>
+								</li>
+								<!-- Menu Footer End-->
+							</ul>
+						</li>
+						<!-- User Account End -->
+					</ul>
+				</div>
+				<!-- Navbar Custom Menu End -->
+			</nav>
+			<!-- Header Navbar End -->
+		</header>
+		<!-- Page Header End -->
+		
+		<!-- Page Left Sidebar Start -->
+		<aside class="main-sidebar">
+			<section class="sidebar">
+				<!-- Search Form Start -->
+				<form action="#" method="get" class="sidebar-form">
+					<div class="input-group">
+						<input type="text" name="q" class="form-control" placeholder="功能搜索..."> <span class="input-group-btn">
+							<button type="submit" name="search" id="search-btn" class="btn btn-flat">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+				</form>
+				<!-- Search Form End -->
+				
+				<!-- Function Menu Start -->
+				<ul class="sidebar-menu" data-widget="tree">
+					<li class="header">功能导航区</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-cube"></i> <span>商品管理</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="/page_tbItemCat" target="contentFrame"> <i class="fa fa-minus"></i> 商品分类</a></li>
+							<li><a href="tbGoodsEdit.html" target="contentFrame"> <i class="fa fa-minus"></i> 新增商品</a></li>
+							<li><a href="tbGoods.html" target="contentFrame"> <i class="fa fa-minus"></i> 全部商品</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-clone"></i> <span>模板管理</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="tbSpecification.html" target="contentFrame"> <i class="fa fa-minus"></i> 规格管理</a></li>
+							<li><a href="tbSpecificationOption.html" target="contentFrame"> <i class="fa fa-minus"></i> 规格明细</a></li>
+							<li><a href="tbTypeTemplate.html" target="contentFrame"> <i class="fa fa-minus"></i> 模板管理</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-user"></i> <span>用户管理</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="tbBuyer.html" target="contentFrame"> <i class="fa fa-minus"></i> 基本信息</a></li>
+							<li><a href="tbBuyerInfo.html" target="contentFrame"> <i class="fa fa-minus"></i> 拓展信息</a></li>
+							<li><a href="tbBuyerQuestion.html" target="contentFrame"> <i class="fa fa-minus"></i> 密保管理</a></li>
+							<li><a href="tbReceivingAddress.html" target="contentFrame"> <i class="fa fa-minus"></i> 收货地址</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-map-marker"></i> <span>区域管理</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="tbChinaCity.html" target="contentFrame"> <i class="fa fa-minus"></i> 城市管理</a></li>
+							<li><a href="tbChinaProvince.html" target="contentFrame"> <i class="fa fa-minus"></i> 省份管理</a></li>
+							<li><a href="tbChinaArea.html" target="contentFrame"> <i class="fa fa-minus"></i> 区县管理</a></li>
+							<li><a href="tbChinaStreet.html" target="contentFrame"> <i class="fa fa-minus"></i> 街道管理</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-book"></i> <span>内容管理</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="/page_tbContentCategory" target="contentFrame"> <i class="fa fa-minus"></i> 内容分类</a></li>
+							<li><a href="/page_tbContent" target="contentFrame"> <i class="fa fa-minus"></i> 内容列表</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-dollar"></i> <span>订单管理</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="tbOrder.html" target="contentFrame"> <i class="fa fa-minus"></i> 全部订单</a></li>
+							<li><a href="tbOrderItem.html" target="contentFrame"> <i class="fa fa-minus"></i> 订单明细</a></li>
+							<li><a href="tbPayLog.html" target="contentFrame"> <i class="fa fa-minus"></i> 支付日志</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="javascript:;"> <i class="fa fa-bolt"></i> <span>服务监测</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span> </a>
+						<ul class="treeview-menu">
+							<li><a href="http://dubbo.fresh.com:8090/dubbo" target="_blank"> <i class="fa fa-minus"></i> 服务监控</a></li>
+							<li><a href="http://activemq.fresh.com:8161/index.html" target="_blank"> <i class="fa fa-minus"></i> 消息队列</a></li>
+							<li><a href="http://solr.fresh.com:8080/solr" target="_blank"> <i class="fa fa-minus"></i> 索引集群</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- Function Menu End -->
+			</section>
+		</aside>
+		<!-- Page Left Sidebar End -->
+		
+		<!-- Page Content Start -->
+		<div class="content-wrapper">
+			<iframe src="/page_welcome" width="100%" height="100%" frameborder="0" name="contentFrame" id="contentFrame" onload="this.height = document.documentElement.clientHeight - 115;"></iframe>
+		</div>
+		<!-- Page Content End -->
+		
+		<!-- Page Footer Start -->
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs">
+				<b>Version</b> {{adminConfig.version}}
+			</div>
+			<strong ng-bind-html="adminConfig.copyright | trustHtml"></strong>
+		</footer>
+		<!-- Page Footer End -->
+	</div>
+	<!-- Page Wrapper End -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- SlimScroll -->
+	<script type="text/javascript" src="../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script type="text/javascript" src="../plugins/fastclick/fastclick.min.js"></script>
+	<!-- AdminLTE -->
+	<script type="text/javascript" src="../plugins/adminlte/js/adminlte.min.js"></script>
+	<!-- zeroModal -->
+	<script type="text/javascript" src="../plugins/zeroModal/js/zeroModal.min.js"></script>
+	<!-- iCheck -->
+	<script type="text/javascript" src="../plugins/iCheck/icheck.min.js"></script>
+</body>
+</html>

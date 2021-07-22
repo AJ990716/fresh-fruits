@@ -1,0 +1,247 @@
+/*!
+ * 功能：果然新鲜 - 购物车
+ */
+
+input[type=checkbox] {
+	width: 15px!important;
+	height: 15px!important;
+}
+.cart {
+	background: #fefefe;
+}
+.cart>div>h2 {
+	width: 100%;
+	height: 40px;
+	outline: 0;
+	border: none;
+	border-bottom: 1px solid #e8abaf;
+	background: #fff;
+	color: #c61722;
+	font-weight: 900;
+}
+.shopping-cart,
+.shopping-cart-title {
+	display: block;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+.shopping-cart-title {
+	width: 100%;
+	height: 45px;
+}
+.shopping-cart-item {
+	float: left;
+	display: block;
+	margin-top: 15px;
+	padding: 0;
+	width: 100%;
+	height: 75pt;
+	outline: 0;
+	border: 1px solid #e6e6e6;
+}
+.shopping-cart-title1,
+.shopping-cart-title2,
+.shopping-cart-title3,
+.shopping-cart-title4,
+.shopping-cart-title5,
+.shopping-cart-title6,
+.shopping-cart-title7,
+.shopping-cart-title8 {
+	float: left;
+	overflow: hidden;
+	height: 45px;
+	background: #f9f9f9!important;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 45px;
+}
+.shopping-cart-item1,
+.shopping-cart-item2,
+.shopping-cart-item3,
+.shopping-cart-item4,
+.shopping-cart-item5,
+.shopping-cart-item6,
+.shopping-cart-item7,
+.shopping-cart-item8 {
+	float: left;
+	overflow: hidden;
+	height: 75pt;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 75pt;
+}
+.shopping-cart-item1,
+.shopping-cart-title1 {
+	width: 60px;
+}
+.shopping-cart-item2,
+.shopping-cart-title2 {
+	width: 75pt;
+}
+.shopping-cart-item2>img {
+	width: 5pc;
+	height: 5pc;
+}
+.shopping-cart-item3,
+.shopping-cart-title3 {
+	width: 310px;
+}
+.shopping-cart-item4,
+.shopping-cart-item5,
+.shopping-cart-title4,
+.shopping-cart-title5 {
+	width: 150px;
+}
+.shopping-cart-item6 {
+	color: #c61722;
+	font-weight: 600;
+	font-size: 15px;
+}
+.shopping-cart-item6,
+.shopping-cart-title6 {
+	width: 150px;
+}
+.shopping-cart-item7,
+.shopping-cart-title7 {
+	width: 75pt;
+}
+.shopping-cart-item8,
+.shopping-cart-title8 {
+	width: 180px;
+}
+.shopping-cart-item2>img {
+	margin-top: 10px;
+	outline: 0;
+	border: none;
+}
+.shopping-cart-item3>a {
+	display: -webkit-box;
+	overflow: hidden;
+	margin-top: 2pc;
+	width: 100%;
+	height: 36px;
+	color: #333;
+	text-align: left;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	font-weight: lighter;
+	font-size: 14px;
+	line-height: 18px;
+	-webkit-line-clamp: 2;
+}
+.shopping-cart-item8>span:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.count-control {
+	margin-top: 37.5px;
+	margin-left: 14px;
+	width: 7pc;
+	height: 25px;
+	border: 1px solid #bbb;
+	background: #f9f9f9;
+}
+.count-control-center,
+.count-control-left,
+.count-control-right {
+	float: left;
+	display: block;
+	overflow: hidden;
+	width: 30px;
+	height: 25px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 18px;
+	line-height: 25px;
+}
+.count-control-left,
+.count-control-right {
+	cursor: pointer;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.count-control-left {
+	border-right: 1px solid #bbb;
+}
+.count-control-right {
+	border-left: 1px solid #bbb;
+}
+.count-control-left:hover,
+.count-control-right:hover {
+	background-color: #ccc;
+}
+.count-control-center {
+	width: 50px;
+}
+.shopping-cart-bottom {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 40px;
+	outline: 0;
+	line-height: 40px;
+}
+.shopping-cart-bottom1,
+.shopping-cart-bottom2,
+.shopping-cart-bottom3,
+.shopping-cart-bottom4,
+.shopping-cart-bottom5,
+.shopping-cart-bottom6,
+.shopping-cart-bottom7,
+.shopping-cart-bottom8 {
+	float: left;
+	margin-top: 15px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.shopping-cart-bottom1,
+.shopping-cart-bottom2 {
+	width: 75pt;
+	background: #f9f9f9!important;
+}
+.shopping-cart-bottom3 {
+	width: 25px;
+	background: #f9f9f9!important;
+}
+.shopping-cart-bottom4,
+.shopping-cart-bottom5 {
+	width: 191.666666px;
+	background: #f9f9f9!important;
+}
+.shopping-cart-bottom6 {
+	width: 345px;
+	background: #f9f9f9!important;
+}
+.shopping-cart-bottom7 {
+	width: 75pt;
+	background: #f9f9f9!important;
+}
+.shopping-cart-bottom8 {
+	width: 75pt;
+}
+.shopping-cart-bottom1:hover,
+.shopping-cart-bottom2:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.shopping-cart-bottom7>span {
+	color: #c61722;
+}
+.shopping-cart-bottom8>a {
+	display: block;
+	width: 150px;
+	height: 40px;
+	background-color: #b0b0b0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1pc;
+	line-break: 30px;
+}
+.shopping-cart-bottom8>a:hover {
+	background-color: #bfbfbf;
+}

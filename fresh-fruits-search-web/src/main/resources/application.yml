@@ -1,0 +1,32 @@
+server:
+  port: 8086
+# 注册中心服务器地址
+spring:
+  thymeleaf:
+    cache: false
+    check-template-location: 'true'
+    encoding: 'UTF-8'
+    mode: 'HTML5 '
+    prefix: 'classpath:/templates/'
+    suffix: '.html'
+  # nacos的地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
+  # 服务注册到注册中心的名字
+  application:
+    name: fresh-fruits-buyer-web
+  main:
+    # 设置FeignClient重名
+    allow-bean-definition-overriding: on
+
+# swagger配置
+swagger:
+  base-package: com.fresh.fruits.controller
+  title: fresh-fruits-buyer-web-api
+  contact:
+    email: 234234332@163.com
+    url: www.fresh.com
+  version: 1.0

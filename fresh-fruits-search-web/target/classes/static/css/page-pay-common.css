@@ -1,0 +1,35 @@
+/*!
+ * 功能说明：果然新鲜 - 支付页面通用样式
+ */
+
+.pay-middle {
+	margin: 25px 0;
+}
+.pay-middle>div.fresh-main {
+	box-sizing: border-box;
+	padding-top: 25px;
+	min-height: 500px;
+	border: 1px solid #e0e0e0;
+}
+.pay-middle>div.fresh-main>h2,
+.pay-middle>div.fresh-main>p {
+	margin: 20px 0;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-ms-user-select: none;
+}
+.pay-middle>div.fresh-main>p span.red {
+	color: #c61722;
+	font-weight: blod;
+}
+.pay-middle>div.fresh-main>p.time {
+	margin-top: 30px;
+	color: #666;
+}
+.pay-middle>div.fresh-main>p.time span#times {
+	margin-right: 5px;
+	color: #000;
+	font-weight: blod;
+}

@@ -1,0 +1,60 @@
+/*!
+ * 功能：用户中心左侧导航栏样式
+ */
+
+.box-left {
+	float: left;
+	width: 200px;
+}
+.box-right {
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	width: 980px;
+}
+.option {
+	width: 170px;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+	background: #fff;
+}
+.option div {
+	padding-left: 30px;
+}
+.title {
+	width: 140px;
+	height: 60px;
+	color: #c61722;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 60px;
+}
+.classification {
+	width: 140px;
+	height: 43px;
+	line-height: 35px;
+}
+.classification>span {
+	font-weight: 900;
+}
+.classification-title {
+	width: 140px;
+	height: 35px;
+	line-height: 35px;
+}
+.classification-title:hover {
+	color: #c61722;
+}
+.option>ul {
+	padding-top: 9pt;
+	padding-bottom: 9pt;
+	border-top: 1px solid #f5f5f5;
+}
+.box-right {
+	float: left;
+	padding: 20px;
+	width: 60pc;
+	min-height: 540px;
+	border-radius: 5px;
+	background: #fff;
+}

@@ -1,0 +1,84 @@
+/*!
+ * 功能说明：果然新鲜 - 微信支付
+ */
+
+.weixin {
+	margin: 25px 0;
+}
+.weixin .title .t {
+	height: 40px;
+	font-weight: blod;
+	font-size: 1pc;
+	line-height: 40px;
+}
+.weixin .title .t .l {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+.weixin .title .t .r {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+.weixin .title .t .l h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+.weixin .title .t .l .success-icon {
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+	width: 40px;
+	height: 40px;
+	background: url(../img/page-pay-common/success.png) no-repeat;
+	background-size: cover;
+}
+.weixin .title .t .r .money {
+	color: #c61722;
+	font-weight: bolder;
+	font-style: italic;
+}
+.weixin .content {
+	box-sizing: border-box;
+	margin: 20px auto;
+	margin-bottom: 0;
+	padding: 25px;
+	border: 1px solid #ddd;
+}
+.weixin .content .l {
+	float: left;
+	width: 150px;
+}
+.weixin .content .r {
+	float: right;
+	width: calc(100% - 150px);
+}
+.weixin .content .r .t {
+	color: #c61722;
+	font-size: 14px;
+	font-family: microsoft yahei;
+	line-height: 40px;
+}
+.weixin .content .r .code {
+	width: 100%;
+}
+.weixin .content .r .code .left {
+	float: left;
+	width: 300px;
+}
+.weixin .content .r .code img {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+.weixin .content .r .code .left>img:first-child {
+	margin-bottom: 25px;
+}
+.weixin .content .r .code .right {
+	float: right;
+	width: calc(100% - 25pc);
+}

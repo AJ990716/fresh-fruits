@@ -1,0 +1,193 @@
+/*!
+ * 功能：果然新鲜 - 搜索结果
+ */
+
+
+/*!
+ * 功能：搜索结果
+ */
+
+.position {
+	padding-top: 1pc;
+	padding-bottom: 14px;
+	width: 75pc;
+	height: 20px;
+}
+.position>span {
+	color: #333;
+	font-weight: 700;
+}
+
+/*!
+ * 功能：筛选条件
+ */
+
+.conditions {
+	overflow: hidden;
+	padding: 20px;
+	background: #fff;
+}
+.conditions,
+.conditions .item {
+	box-sizing: border-box;
+	width: 100%;
+}
+.conditions .item {
+	height: 35px;
+}
+.conditions .item li {
+	max-width: 130px;
+	min-width: 90px;
+	list-style: none;
+}
+.conditions .item li,
+.conditions .item li:first-child {
+	float: left;
+	display: block;
+	overflow: hidden;
+	height: 35px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 35px;
+	-o-text-overflow: ellipsis;
+}
+.conditions .item li:first-child {
+	max-width: 90px;
+	min-width: 75px;
+	text-align: justify;
+}
+.conditions .item li>a:hover {
+	color: #c61722;
+}
+.conditions .item li:first-child>a:hover {
+	color: #333;
+}
+.shopshowbox {
+	margin-top: 15px;
+	width: 75pc;
+}
+.shopshowbox>ul {
+	overflow: hidden;
+	width: 1210px;
+}
+.shopshowbox>ul>a>li {
+	position: relative;
+	float: left;
+	width: 242px;
+	height: 330px;
+}
+.shopbox {
+	position: absolute;
+	top: 0;
+	padding: 15px;
+	width: 200px;
+	height: 287px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: #333;
+	box-shadow: 0 0 0 #ccc;
+}
+.shopbox:hover {
+	position: absolute;
+	top: -3px;
+	box-shadow: 0 7px 10px #ccc;
+	transition: all .1s linear;
+}
+.shopbox>img {
+	width: 200px;
+	height: 200px;
+}
+.shopbox>h2 {
+	display: block;
+	overflow: hidden;
+	padding: 0;
+	width: 200px;
+	height: 42px;
+	color: #666;
+	text-overflow: ellipsis;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.shopbox>div {
+	width: 200px;
+	height: 17px;
+}
+.shopbox>div>span:nth-child(1) {
+	float: left;
+	display: block;
+	width: 60px;
+	height: 17px;
+	color: #c61722;
+	line-height: 17px;
+}
+.shopbox>div>span:nth-child(2) {
+	overflow: hidden;
+	width: 90pt;
+	color: #666;
+	text-align: right;
+	text-overflow: ellipsis;
+	line-height: 17px;
+}
+.shopbox>div>span:nth-child(2),
+.shopbox>div>span:nth-child(2)>span {
+	float: right;
+	display: block;
+	height: 17px;
+}
+
+/*!
+ * 功能：底部页码
+ */
+
+.pagenum {
+	clear: both;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	width: 75pc;
+	height: 25pc;
+	height: 30px;
+}
+.pagenum>ul {
+	float: right;
+	height: 30px;
+}
+.pagenum>ul>div {
+	float: left;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ccc;
+	background: #f5f5f5;
+}
+.pagenum>ul>div:hover {
+	border: 1px solid #c61722;
+	cursor: pointer;
+}
+.pagenum>ul li {
+	float: left;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ccc;
+	background: #f5f5f5;
+	color: #666;
+	text-align: center;
+	line-height: 30px;
+}
+.pagenum>ul li:hover {
+	border: 1px solid #c61722;
+}
+.pagenum>ul>div>img {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 20px;
+	height: 20px;
+	opacity: .5;
+}
+.addressimg {
+	width: 17px;
+	height: 17px;
+}
