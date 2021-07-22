@@ -1,0 +1,19 @@
+server:
+  port: 8089
+
+# 数据源配置
+spring:
+  application:
+    name: fresh-fruits-third-service
+  cloud:
+    nacos:
+      discovery:
+        #Nacos注册中心地址
+        server-addr: 127.0.0.1:8848
+        enabled: true
+
+
+# 互译无线的APPIID和APIKEY
+huyi:
+  APIID: C78637849
+  APIKEY: 9eaaa82305d3f8d29007c34ada5664f4

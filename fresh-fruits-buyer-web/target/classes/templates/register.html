@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="shortcut icon" href="img/page-common/favicon.ico" type="image/x-icon"/>
+    <title>果然新鲜 - 注册</title>
+    <link rel="stylesheet" type="text/css" href="css/page-common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/page-register.css"/>
+    <link rel="stylesheet" type="text/css" href="css/page-login-header.css"/>
+</head>
+
+<body>
+<!-- 网页头部开始 -->
+<script type="text/javascript" src="js/page-login-header.js" charset="UTF-8"></script>
+<!-- 网页头部结束 -->
+
+<!-- 网页主体开始 -->
+<div class="fresh-main-fluid" style="width: 100%;height:100%;background:#2663b6;">
+    <div class="fresh-main fresh-center fresh-clearfix">
+        <div class="fresh-body-1">
+            <div class="fresh-img"><img src="img/page-login/bg.png"/></div>
+            <div class="fresh-registerbox">
+                <h2>账号注册</h2>
+                <form name="register" id="register" onsubmit="return false;">
+                    <div><span>用户名</span> <input type="text" name="nickname" id="username" placeholder="请输入用户名"/>
+                    </div>
+                    <div><span>手机号</span> <input type="tel" name="mobile" id="telephone" placeholder="请输入手机号"/>
+                    </div>
+                    <div><span>密码</span> <input type="password" name="password" id="password" placeholder="请输入密码"/>
+                    </div>
+                    <div><span>验证码</span>
+                        <input class="verification" type="text" name="verificationcode" id="verificationcode"
+                               placeholder="请输入验证码"/>
+                        <input class="getverification" type="button" id="getverification" value="获取验证码"/>
+                    </div>
+                    <div><span></span>
+                        <input type="checkbox" name="accept" id="accept">
+                        <p><label for="accept">已阅读《用户协议》</label></div>
+                    <div>
+                        <input type="submit" onclick="registBuyer();" value="确认注册"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 网站主体结束 -->
+
+<!-- 网页底部开始 -->
+<script type="text/javascript" src="js/page-footer.js" charset="UTF-8"></script>
+<!-- 网页底部结束 -->
+
+<script type="text/javascript" src="plugins/jquery/jquery-1.12.4.min.js"></script>
+
+<script type="text/javascript">
+
+    var timeId;
+    //验证码小特效
+    $(function () {
+        $("#getverification").click(function () {
+            //发送异步请求获取验证码
+            //1.需要获取用户输入的手机号(数据库不存在)
+            var telephone=$("#telephone").val();
+            //验证手机号的合法性
+            var regExp=/^(134[012345678]\d{7}|1[34578][012356789]\d{8})$/;
+            if(regExp.test(telephone)==false){
+                alert("手机号输入不合法!")
+            }else{
+              //调用短信API进行短信发送
+              $.getJSON("/message/send/"+telephone,function (result) {
+                  if(result.code==200){
+                      timeId=window.setInterval("showTime()", 1000);
+                      //alert("短信发送成功，注意查看手机!");
+                  }else if(result.code==9009){
+                      alert("手机号已经被注册！")
+                  }else{
+                      alert("短信发送异常！")
+                  }
+              });
+            }
+        });
+    });
+
+    var time = 60;
+
+    function showTime() {
+        $("#getverification").val(time + "秒");
+        $("#getverification").prop("disabled", true);
+        time--;
+        if (time == 0) {
+            time=10;
+            window.clearInterval(timeId);//清除定时器
+            $("#getverification").val("获取验证码");
+            $("#getverification").prop("disabled", false);
+        }
+    }
+    
+
+    //用户注册
+    function registBuyer() {
+        if($("#accept").prop("checked")==true){
+            var data=$("#register").serialize();
+            //alert(JSON.stringify(data));
+            //注册
+            $.post("/buyer/register",data,function (result) {
+                if(result.code==0){
+                    alert("注册成功!");
+                }else if(result.code=505){
+                    alert("验证码输入错误!");
+                }else if(result.code=506){
+                    alert("验证码过期,重新获取~")
+                }else {
+                    alert("注册失败,稍后再试");
+                }
+            },"json");
+
+        }else{
+            alert("请先同意商城协议！");
+        }
+    }
+
+</script>
+
+</body>
+</html>

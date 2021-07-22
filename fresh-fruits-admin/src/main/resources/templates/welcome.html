@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="fresh-admin" ng-controller="welcomeController" ng-init="initCounts();findFeedbackSearch(1,8)">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>果然新鲜 - 欢迎页</title>
+<!-- Page basic information -->
+<meta name="description" content="{{adminConfig.description}}">
+<meta name="keywords" content="{{adminConfig.keywords}}">
+<meta name="author" content="{{adminConfig.author}}">
+<!-- Page icon information -->
+<link rel="shortcut icon" href="../favicon.ico" />
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="../plugins/ionicons/css/ionicons.min.css">
+<!-- Roboto -->
+<link rel="stylesheet" href="../plugins/roboto/css/roboto.min.css">
+<!-- AdminLTE -->
+<link rel="stylesheet" href="../plugins/adminlte/css/adminlte.min.css">
+<!-- AdminLTE skins -->
+<link rel="stylesheet" href="../plugins/adminlte/css/skins/_all-skins.min.css">
+<!-- zeroModal -->
+<link rel="stylesheet" href="../plugins/zeroModal/css/zeroModal.min.css">
+<!-- iCheck -->
+<link rel="stylesheet" href="../plugins/iCheck/all.min.css">
+<!-- morris.js -->
+<link rel="stylesheet" href="../plugins/morris.js/css/morris.min.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="../plugins/html5shiv/html5shiv.min.js"></script>
+  <script type="text/javascript" src="../plugins/respond/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="hold-transition {{adminConfig.theme}} sidebar-mini">
+	<!-- 内容主体开始 -->
+	<div class="content-wrapper" style="margin-left: 0">
+		<!-- 头部标题开始 -->
+		<section class="content-header">
+			<h1>
+				Fresh Details<small>Control Panel</small>
+			</h1>
+		</section>
+		<!-- 头部标题结束 -->
+
+		<!-- 主体模块开始 -->
+		<section class="content">
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-light-blue color-palette" style="opacity: .95">
+						<div class="inner">
+							<h3>{{dfk}}</h3>
+
+							<p>待付款笔数</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-cny"></i> -->
+							<img src="../img/unpay2.png">
+						</div>
+						<a href="tbOrder.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-green color-palette" style="opacity: .95">
+						<div class="inner">
+							<h3>{{yfk}}</h3>
+
+							<p>已收款笔数</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-money"></i> -->
+							<img src="../img/shoukuan.png">
+						</div>
+						<a href="tbOrder.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-yellow color-palette" style="opacity: .95">
+						<div class="inner">
+							<h3>{{dfh}}</h3>
+
+							<p>待发货数量</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-user"></i> -->
+							<img src="../img/daifahuo.png">
+						</div>
+						<a href="tbOrder.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-orange disabled color-palette" style="background: #f5780c !important; opacity: .95'">
+						<div class="inner">
+							<h3>{{yfh}}</h3>
+
+							<p>已发货数量</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-shopping-cart"></i> -->
+							<img src="../img/yifahuo.png">
+						</div>
+						<a href="tbOrder.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+			</div>
+			<!-- ./row -->
+			<div class="row">
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-purple disabled color-palette" style="opacity: .95">
+						<div class="inner">
+							<h3>{{dyyh}}</h3>
+
+							<p>新增会员数（本月）</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-money"></i> -->
+							<img src="../img/tianjiahuiyuan.png">
+						</div>
+						<a href="tbBuyer.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-maroon disabled color-palette" style="background: #e83b7a !important; opacity: .95">
+						<div class="inner">
+							<h3>{{qbyh}}</h3>
+
+							<p>全部会员数</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-cny"></i> -->
+							<img src="../img/person.png">
+						</div>
+						<a href="tbBuyer.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-red color-palette" style="opacity: .95">
+						<div class="inner">
+							<h3>{{dydd}}</h3>
+
+							<p>新增订单数（本月）</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-shopping-cart"></i> -->
+							<img src="../img/xinzengdingdan.png">
+						</div>
+						<a href="tbOrder.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-3 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-teal disabled color-palette" style="opacity: .95">
+						<div class="inner">
+							<h3>{{qbd}}</h3>
+
+							<p>全部订单数</p>
+						</div>
+						<div class="icon">
+							<!-- <i class="fa fa-user"></i> -->
+							<img src="../img/dingdan.png">
+						</div>
+						<a href="tbOrder.html" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+				<!-- ./col -->
+			</div>
+			<!-- ./row -->
+
+			<div class="row">
+				<div class="col-lg-9 col-xs-12">
+					<!-- LINE CHART -->
+					<div class="box box-info">
+						<div class="box-header with-border">
+							<h3 class="box-title">
+								访客记录<small>（仅显示最近半个月）</small>
+							</h3>
+						</div>
+						<div class="box-body chart-responsive">
+							<div class="chart" id="line-chart" style="height: 393px;"></div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<div class="col-lg-3 col-xs-12">
+					<div class="box box-info">
+						<div class="box-header">
+							<h3 class="box-title">
+								用户反馈<small>（仅显示前八条记录）</small>
+							</h3>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body no-padding">
+							<table class="table">
+								<tbody>
+									<tr>
+										<th style="width: 10px">#</th>
+										<th>问题类型</th>
+										<th>问题标题</th>
+										<th style="width: 80px">操作</th>
+									</tr>
+									<tr ng-repeat="entity in list">
+										<td>{{$index + 1}}.</td>
+										<td ng-if="entity.type == '0'">增加功能</td>
+										<td ng-if="entity.type == '1'">漏洞修复</td>
+										<td>{{entity.title}}</td>
+										<td><button class="btn btn-sm btn-success" data-toggle="modal" data-target="#editModal" ng-click="findFeedbackOne(entity.id)">查看详情</button></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+						<!-- /.box-body -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 主体模块结束 -->
+	</div>
+	<!-- 内容主体结束 -->
+	
+	<!-- Modal Start -->
+	<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">
+						<small>问题详情</small>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<table class="table table-bordered table-striped table-hover dataTable" width="800px" style="margin-bottom: 0px;">
+						<tr>
+							<td style="vertical-align: middle; text-align: center;">反馈类型</td>
+							<td style="vertical-align: middle; text-align: left;">
+								<input type="text" class="form-control"  ng-if="entity.type == '0'" value="增加功能" disabled>
+								<input type="text" class="form-control"  ng-if="entity.type == '1'" value="漏洞修复" disabled>
+							</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle; text-align: center;">反馈标题</td>
+							<td style="vertical-align: middle; text-align: left;"><input type="text" class="form-control" ng-model="entity.title" placeholder="反馈标题" disabled></td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle; text-align: center;">反馈内容</td>
+							<td style="vertical-align: middle; text-align: left;">
+								<textarea style="width: 100%;height: 200px;" class="form-control"  disabled ng-model="entity.desc"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: middle; text-align: center;">联系电话</td>
+							<td style="vertical-align: middle; text-align: left;"><input type="text" class="form-control" ng-model="entity.mobile" placeholder="联系电话" disabled></td>
+						</tr>
+
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success pull-right" data-dismiss="modal" aria-hidden="true">关闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal End -->	
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- SlimScroll -->
+	<script type="text/javascript" src="../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script type="text/javascript" src="../plugins/fastclick/fastclick.min.js"></script>
+	<!-- AdminLTE -->
+	<script type="text/javascript" src="../plugins/adminlte/js/adminlte.min.js"></script>
+	<!-- zeroModal -->
+	<script type="text/javascript" src="../plugins/zeroModal/js/zeroModal.min.js"></script>
+	<!-- iCheck -->
+	<script type="text/javascript" src="../plugins/iCheck/icheck.min.js"></script>
+	<!-- morris.js -->
+	<script type="text/javascript" src="../plugins/morris.js/js/morris.min.js"></script>
+	<!-- raphael -->
+	<script type="text/javascript" src="../plugins/raphael/raphael.min.js"></script>
+	<!-- AngularJS -->
+	<script type="text/javascript" src="../plugins/angular/angular.min.js"></script>
+	<!-- AdminConfig -->
+	<script type="text/javascript" src="../js/adminConfig.js"></script>
+	<!-- Base -->
+	<script type="text/javascript" src="../js/base.js"></script>
+	<!-- Service -->
+	<script type="text/javascript" src="../js/service/welcomeService.js"></script>
+	<script type="text/javascript" src="../js/service/tbOrderService.js"></script>
+	<script type="text/javascript" src="../js/service/tbBuyerService.js"></script>
+	<script type="text/javascript" src="../js/service/tbFeedbackService.js"></script>
+	<script type="text/javascript" src="../js/service/browseService.js"></script>
+	<!-- Controller -->
+	<script type="text/javascript" src="../js/controller/baseController.js"></script>
+	<script type="text/javascript" src="../js/controller/welcomeController.js"></script>
+</body>
+</html>

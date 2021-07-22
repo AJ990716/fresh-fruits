@@ -1,0 +1,10 @@
+fresh-fruits-content-service:8080
+fresh-fruits-admin:8081
+fresh-fruits-portal:8082
+fresh-fruits-itemcat-service:8083
+fresh-fruits-goods-service:8084
+fresh-fruits-search-service:8085
+fresh-fruits-search-web:8086
+fresh-fruits-buyer-service:8087
+fresh-fruits-buyer-web:8088
+fresh-fruits-third-service:8889
